@@ -71,8 +71,9 @@ class Compte{
     $this->_solde -= $argent;
     $compte2->_solde +=$argent;
     }
+
     public function BanqueInfo(){
-        echo "4454637122****<br>".$this->_livret."<br>".$this->_solde." ".$this->_devise."<br>";
+        echo "445463715442****<br>".$this->_livret."<br>".$this->_solde." ".$this->_devise."<br>";
     }
    
 
