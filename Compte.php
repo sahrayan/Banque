@@ -42,25 +42,45 @@ class Compte{
         
     }
 
+
+
+
     public function __toString(){
         return $this->getSolde() .$this->getDevise() .$this->getTitulaire() ."<br>";
     }
-    public function Crediter($ajouter) {
-        $this->setSolde($this->getSolde()+$ajouter);
-        echo "<br>Vous avez créditer le compte de ".$ajouter. " euro. <br>";
+
+
+
+    public function Crediter($argent) {
+        $this->_solde += $argent;
+        echo "<br>Vous avez créditer le compte de ".$argent. " euro. <br>";
     }
-    public function Debit($retrait){
-         $this->_solde -= $retrait;
-         echo "Vous avez retirer " .$retrait. " euro<br>";
+
+
+
+    public function Debit($argent){
+       $this->_solde -= $argent;
+         echo "Vous avez retirer " .$argent. " euro<br>";
     }
 
 
+    public function Virement($compte2,$argent){
+    if ($this->_solde < $argent){
+        echo "Pas assez d'argent ";
+    }
+    $this->_solde -= $argent;
+    $compte2->_solde +=$argent;
+    }
+    public function BanqueInfo(){
+        echo "4454637122****<br>".$this->_livret."<br>".$this->_solde." ".$this->_devise."<br>";
+    }
+   
 
 
 
 
 
-
+ 
 
 
 
