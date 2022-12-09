@@ -44,7 +44,7 @@ class Titu{
     }
    
     public function __toString(){
-        return $this->getNom()."<br>".$this->getPrenom()."<br>". $this->calcAge()."<br>". $this->getVille();
+        return $this->getNom()."<br>".$this->getPrenom()."<br>". $this->DispInfo()."<br>". $this->getVille();
         foreach ($this->_compte as $compte){
             echo $compte."<br>";
         }
@@ -56,11 +56,10 @@ class Titu{
         $dateNaissance = date_create($this->_date);
         $aujourdhui = date("Y-m-d");
         $age = date_diff($dateNaissance, date_create($aujourdhui));
-        return  $age->format('%y');
-        echo $this->_nom;
-             $this->_prenom;
-             diff->format('%y');
-             $this->_ville;
+        echo $this->_nom."<br>";
+        echo $this->_prenom."<br>";
+        echo $age->format('%y')."<br>";
+        echo $this->_ville."<br>";
     
 
             foreach($this->_compte as $compte){
