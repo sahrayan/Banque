@@ -10,7 +10,8 @@ $compte1 =new Compte("Livret B",500,"AED",$titulaire1);
 $compte2 =new Compte("Livret A",20,"euro",$titulaire1);
 $titulaire1->DispInfo();
 
-$compte1->Virement($compte2,10) 
+$compte2->Virement($compte1,10) 
+
 
 
 
