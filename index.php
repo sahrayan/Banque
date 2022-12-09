@@ -6,11 +6,12 @@ require_once "Titulaire.php";
 
 
 $titulaire1 = new Titu('RAIHANI ','Rayan ',"27-01-2004 ",'Strasbourg');
-echo $titulaire1;
+$compte1 =new Compte("Livret b",500,"AED",$titulaire1);
+$compte2 =new Compte("Livret A",20,"euro",$titulaire1);
+$titulaire1->DispInfo();
+$compte1->Virement($compte2,100)
 
-$compte1 =new Compte(14,0,"AED",$titulaire1);
-$compte1->Crediter(50);
-$compte1->Debit(10);
+
 
 
 
