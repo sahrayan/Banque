@@ -65,9 +65,6 @@ class Compte{
 
 
     public function Virement($compte2,$argent){
-    if ($this->_solde < $argent){
-        echo "Pas assez d'argent ";
-    }
     $this->_solde -= $argent;
     $compte2->_solde +=$argent;
     }
@@ -75,6 +72,7 @@ class Compte{
     public function BanqueInfo(){
         echo "445463715442****<br>".$this->_livret."<br>".$this->_solde." ".$this->_devise."<br>";
     }
+   
    
 
 
