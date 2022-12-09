@@ -65,8 +65,7 @@ class Compte{
 
 
     public function Virement($compte2,$argent){
-    $this->_solde -= $argent;
-    $compte2->_solde +=$argent;
+    echo "le nouveau solde et de "." ".$this->setSolde=($this->getSolde()+$argent);
     }
 
     public function BanqueInfo(){
