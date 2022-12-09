@@ -52,11 +52,20 @@ class Titu{
 
 
 
-    public function calcAge(){
+    public function DispInfo(){
         $dateNaissance = date_create($this->_date);
         $aujourdhui = date("Y-m-d");
         $age = date_diff($dateNaissance, date_create($aujourdhui));
         return  $age->format('%y');
+        echo $this->_nom;
+             $this->_prenom;
+             diff->format('%y');
+             $this->_ville;
+    
+
+            foreach($this->_compte as $compte){
+                $compte->BanqueInfo();
+            }
     }
 
     // public function Age()   { 
