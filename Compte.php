@@ -12,6 +12,7 @@ class Compte{
         $this->_solde = $solde;
         $this->_devise = $devise;
         $this->_titulaire = $titulaire;
+        //rajout des titulaires dans compte
         $this->_titulaire->AddCompte($this);
     }
 // Methode
