@@ -4,6 +4,7 @@ class Titu{
     private string $_prenom;
     private string $_date;
     private string $_ville;
+    //creation d'un tableau
     private array $_compte;
 
     function __construct (string $nom, string $prenom, string $date, string $ville){
@@ -14,10 +15,11 @@ class Titu{
         $this->_compte = [];
     
     } 
+    //cajout de chanque compte dans compte
     public function AddCompte($compte) {
         $this->_compte[] = $compte;
     }
-
+// methode
     public function getNom():string {
         return $this->_nom;
     }
@@ -42,7 +44,7 @@ class Titu{
     public function setVille(String $ville) {
         return $this->_ville = $ville;
     }
-   
+   //retourne les informations d'un titulaire
     public function __toString(){
         return $this->getNom()."<br>".$this->getPrenom()."<br>". $this->DispInfo()."<br>". $this->getVille();
         foreach ($this->_compte as $compte){
@@ -51,17 +53,19 @@ class Titu{
     }
 
 
-
+//affiche les info du titulaire
     public function DispInfo(){
+        //calcul de l'age a partire d'une date de naissance.
         $dateNaissance = date_create($this->_date);
         $aujourdhui = date("Y-m-d");
         $age = date_diff($dateNaissance, date_create($aujourdhui));
         echo $this->_nom."<br>";
         echo $this->_prenom."<br>";
+        //format de l'age
         echo $age->format('%y')."<br>";
         echo $this->_ville."<br>";
     
-
+//utilise foreach pour afficher la list des comptes
             foreach($this->_compte as $compte){
                 $compte->BanqueInfo();
             }
